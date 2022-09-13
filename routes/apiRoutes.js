@@ -33,15 +33,15 @@ router.delete("/delete/:id", (req, res) => {
 });
 
 // edit a todo
-router.put("/edit", (req, res) => {
+router.put("/edit/:id", (req, res) => {
   db.Todo.update(
     {
       text: req.body.text
     },
     {
-      where: { id: req.body.id }
+      where: { id: req.params.id }
     }
-  ).then(() => res.send("edited"));
+  ).then((updatedTodo) => res.send(updatedTodo));
 });
 
 module.exports = router;
