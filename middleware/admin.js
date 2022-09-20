@@ -1,12 +1,7 @@
 const JWT =require('jsonwebtoken');
 
 
-const publicKey=`-----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCcXFatcPAM+VrQA2/gTUYChZ9f
-xEtQGYsrB6KPNcIPlznfCGErfX/+0W58JZKOx6ZUQDtSBAtjg5xyp8eQb6xGCR69
-flrrupen2BbVVPIeT/hXOkX1nSRyTUVBLAqtwzPegjFo0oPlt5bjHD9g5Meqm8SW
-+o9UY+G/RKqEYycGPQIDAQAB
------END PUBLIC KEY-----`;
+const publicKey=`put public key from online`;
 
 const admin= (req,res,next)=>{
 
