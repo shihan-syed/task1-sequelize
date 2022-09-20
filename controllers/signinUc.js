@@ -14,8 +14,9 @@ const signIn = async (req,res)=>{
 
             const matchPassword= await bcrypt.compare(req.body.password , existingUser.password);
             if(!matchPassword){ return res.status(500).json({message :'invalid password'})}
-            const token=JWT.sign({email : existingUser.email}, privateKey ,{algorithm : 'RS256'})
-            res.status(201).json({user : existingUser , token : token })
+            // const token=JWT.sign({email : existingUser.email}, privateKey ,{algorithm : 'RS256'})
+            // res.status(201).json({user : existingUser , token : token })
+            res.status(201).json({message :`welcome ${existingUser.email} !`})
         
     } catch (error) {
         console.log(error);
